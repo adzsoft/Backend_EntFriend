@@ -9,13 +9,14 @@ Web App for Banking and Taxes Manaement for Belarusian Entrepreneurs and Small B
     `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Install sqlite `brew install sqlite3`. 
 1. To open sqlite on Mac: `sqlite3'`  
-1. Create a database in the project for the path </strong>database/db_name.sqlite</strong> with any named, for example `touch db_name.sqlite`. 
+1. Create a database in the project for the path </strong>database/db_name.sqlite</strong> with any named, for example  
+`touch db_name.sqlite`. 
 1. Download composer https://getcomposer.org/download/  
-1. Clone repo above.  
+1. Clone repo above.   
 1. Rename `.env.example` file to `.env` inside your project root and fill the database information.
-1. Edit configuration in the file <strong>.env</strong>:
-`DB_CONNECTION=sqlite` 
-`DB_DATABASE=/absolute/path/to/database.sqlite`
+1. Edit configuration in the file <strong>.env</strong>:  
+`DB_CONNECTION=sqlite`  
+`DB_DATABASE=/absolute/path/to/database.sqlite`  
 1. Open the console and cd your project root directory.  
 1. Run `composer install` or `php composer.phar install`.  
 1. Run `php artisan key:generate`.  
@@ -27,5 +28,4 @@ Web App for Banking and Taxes Manaement for Belarusian Entrepreneurs and Small B
 ##### You can now access your project at localhost:8000 :)
 
 ## List of routes to use and test 
-	![List of routes](routes.png)
-
+![List of routes](routes.png)
