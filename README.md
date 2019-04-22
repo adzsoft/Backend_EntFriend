@@ -21,20 +21,18 @@ Web App for Banking and Taxes Manaement for Belarusian Entrepreneurs and Small B
     brew install sqlite
     ```
 
-1. Clone this repo  
+2. Clone this repo  
     ``` bash
     git clone https://github.com/adzsoft/Backend_EntFriend.git
     ```
 
-1. Create new file in the project at path (you may choose your own name for the file)  
+3. Create new file in the project at path (you may choose your own name for the file)  
     ``` bash
     # run from project's root dir  
     touch database/db_name.sqlite
     ```  
 
-1. Open the console and cd your project root directory  
-
-1. Install required PHP packages and finish setup  
+4. Install required PHP packages and finish setup  
     ``` bash
     # run from project's root dir  
     composer install  
@@ -50,10 +48,15 @@ Web App for Banking and Taxes Manaement for Belarusian Entrepreneurs and Small B
     php artisan serve  
     ```
 
-1. You can now access your project at  
+We're done here, congrats!
+
+
+### Check Setup Works
+
+5. You can now access your project at  
     http://localhost:8000  
 
-1. Test that end-points are configured  
+6. Test that end-points are configured  
     ``` bash
     php artisan route:list
     ```
