@@ -7,14 +7,14 @@ Web App for Banking and Taxes Manaement for Belarusian Entrepreneurs and Small B
 
 ## Setup Local Development Environment on MacOS
 
-### Prerequisites: 
+### Prerequisites  
 1. Homebrew – package manager for MacOS  
     https://brew.sh/
 
 
-### Step by Step Guide
+### Step by Step Guide  
 
-1. Install required components:  
+1. Install required components  
     ```
     brew install php
     brew install composer
