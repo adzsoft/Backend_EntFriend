@@ -61,5 +61,16 @@ We're done here, congrats!
     php artisan route:list
     ```
 
-    The output should be similar to the one on the picture:  
-    ![](routes.png)  
+    The output should be similar to the one on the picture or table below:  
+    ![](routes.png)
+
+    | Domain | Method   | URI           | Name | Action                                                   | Middleware     |
+|--------|----------|---------------|------|----------------------------------------------------------|----------------|
+|        | GET|HEAD | /             |      | Closure                                                  | web            |
+|        | GET|HEAD | api/closed    |      | App\Http\Controllers\DataController@closed               | api,jwt.verify |
+|        | POST     | api/login     |      | App\Http\Controllers\UserController@authenticate         | api            |
+|        | GET|HEAD | api/open      |      | App\Http\Controllers\DataController@open                 | api            |
+|        | POST     | api/register  |      | App\Http\Controllers\UserController@register             | api            |
+|        | GET|HEAD | api/user      |      | App\Http\Controllers\UserController@getAuthenticatedUser | api,jwt.verify |
+|        | GET|HEAD | api/users     |      | App\Http\Controllers\UserController@getAllUsers          | api            |
+|        | GET|HEAD | api/users/{id |      | App\Http\Controllers\UserController@getUserById          | api            |
