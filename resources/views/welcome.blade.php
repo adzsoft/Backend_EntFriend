@@ -1,99 +1,195 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="{{asset('css/uikit.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css"/>
+    <title>Service page</title>
+</head>
+<body>
+<div id="page-wrapper">
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+            <div class="uk-container">
+                <a href="#"><img data-src="{{asset('img/EntFriend.png') }}" width="" height="" alt="" uk-img></a>
+            </div>
+        </div>
+        <div class="uk-navbar-right">
+            <div class="uk-container">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#"><img data-src="{{asset('img/share.png') }}" width="" height="" alt="" uk-img></a></li>
+                    <li><a href="#"><img data-src="{{asset('img/settings-icon.png') }}" width="" height="" alt="" uk-img></a></li>
+                    <li><a href="#"><img data-src="{{asset('img/help-circle.png') }}" width="" height="" alt="" uk-img></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="uk-section section-department">
+        <div class="uk-container uk-container-expand">
+            <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
+                <div class="uk-width-auto">
+                    <div class="uk-card uk-card-body uk-flex uk-flex-column">
+                        <button class="uk-button uk-button-default button-control">Сегодня</button>
+                        <button class="uk-button uk-button-default button-control" >К дате</button>
+                    </div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="uk-width-expand">
+                    <div class="uk-card uk-card-body card-list-item">БАНК
+                        <img data-src="{{asset('img/phone-call.png') }}" width="" height="" alt="" uk-img>
+                        <p>
+                            платежи до: 16:30 <br>
+                            открыт до: 17:30
+                        </p>
+                    </div>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="uk-width-expand">
+                    <div class="uk-card uk-card-body card-list-item">НАЛОГОВАЯ
+                        <img data-src="{{asset('img/phone-call.png') }}" width="" height="" alt="" uk-img>
+                        <p>
+                            перерыв: 13 - 14 <br>
+                            открыта до: 19:00
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-width-expand">
+                    <div class="uk-card uk-card-body card-list-item">МОИ ЗАДАЧИ</div>
+                </div>
+                <div class="uk-width-expand">
+                    <div class="uk-card uk-card-body card-list-item">КЛИЕНТЫ</div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+    <div class="uk-container uk-container-expand">
+        <div class="uk-grid-small uk-child-width-expand@s uk-text-left" uk-grid>
+            <div class="uk-width-auto">
+                Апрель
+                <table class="uk-table uk-table-justify uk-table-divider table-head">
+                    <thead>
+                    <tr>
+                        <th>Воскр
+                            <br>
+                            20</th>
+                    </tr>
+                    <tr>
+                        <th>Воскр
+                            <br>
+                            20</th>
+                    </tr>
+                    <tr>
+                        <th>Воскр
+                            <br>
+                            20</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="uk-width-expand">
+                <div class="uk-card uk-card-body card-list-сontrol">
+                    <img data-src="{{asset('img/btn.png') }}" width="" height="" alt="" uk-img>
+                </div>
+                <table class="uk-table uk-table-justify uk-table-divider">
+                    <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="uk-width-expand">
+                <div class="uk-card uk-card-body card-list-сontrol">
+                    <img data-src="{{asset('img/btn.png') }}" width="" height="" alt="" uk-img>
+                </div>
+                <table class="uk-table uk-table-justify uk-table-divider">
+                    <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="uk-width-expand">
+                <div class="uk-card uk-card-body card-list-сontrol">
+                    <img data-src="{{asset('img/btn.png') }}" width="" height="" alt="" uk-img>
+                </div>
+                <table class="uk-table uk-table-justify uk-table-divider">
+                    <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="uk-width-expand">
+                <div class="uk-card uk-card-body card-list-сontrol">
+                    <img data-src="{{asset('img/btn.png') }}" width="" height="" alt="" uk-img>
+                    <span>пригласить!</span>
+                </div>
+                <table class="uk-table uk-table-justify uk-table-divider">
+                    <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="page-footer" class="uk-margin-top" uk-sticky>
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+            <div class="uk-container uk-container-small">
+                EntFriend © 2019
+            </div>
+        </div>
+        <div class="uk-navbar-right">
+            <div class="uk-container uk-container-small">
+                <ul class="uk-navbar-nav">
+                    <li><a href="#">Конфиденциальность</a></li>
+                    <li><a href="#">Условия обслуживания</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit-icons.min.js"></script>
+</body>
 </html>
