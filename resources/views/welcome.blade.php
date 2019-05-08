@@ -32,7 +32,7 @@
         <div class="uk-container uk-container-expand">
             <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
                 <div class="uk-width-auto">
-                    <div class="uk-card uk-card-body uk-flex uk-flex-column">
+                    <div class="uk-card uk-card-body uk-flex uk-flex-column date-control">
                         <button class="uk-button uk-button-default button-control">Сегодня</button>
                         <button class="uk-button uk-button-default button-control" >К дате</button>
                     </div>
